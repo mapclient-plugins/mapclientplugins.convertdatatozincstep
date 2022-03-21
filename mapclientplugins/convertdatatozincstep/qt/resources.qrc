@@ -1,0 +1,6 @@
+
+<RCC>
+  <qresource prefix="convertdatatozincstep">
+    <file>images/utility.png</file>
+  </qresource>
+</RCC>
