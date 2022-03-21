@@ -44,6 +44,12 @@ class Ui_ConfigureDialog(object):
 
         self.formLayout.setWidget(1, QFormLayout.FieldRole, self.comboBoxInputData)
 
+        self.textEditInputData = QTextEdit(self.configGroupBox)
+        self.textEditInputData.setObjectName(u"textEditInputData")
+        self.textEditInputData.setReadOnly(True)
+
+        self.formLayout.setWidget(2, QFormLayout.SpanningRole, self.textEditInputData)
+
 
         self.gridLayout.addWidget(self.configGroupBox, 0, 0, 1, 1)
 

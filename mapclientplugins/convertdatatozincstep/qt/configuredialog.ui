@@ -40,6 +40,13 @@
       <item row="1" column="1">
        <widget class="QComboBox" name="comboBoxInputData"/>
       </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QTextEdit" name="textEditInputData">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
    </item>

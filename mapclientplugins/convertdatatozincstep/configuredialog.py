@@ -7,6 +7,26 @@ INVALID_STYLE_SHEET = 'background-color: rgba(239, 0, 0, 50)'
 DEFAULT_STYLE_SHEET = ''
 
 
+def _display_parameter(name, importer_parameters):
+    display = ""
+    names = []
+    if name in importer_parameters:
+        names.append(importer_parameters[name])
+    elif name + "s" in importer_parameters:
+        names.extend(importer_parameters[name + "s"])
+
+    if len(names):
+        display += "\n"
+        display += f"## {name}"
+        display += "s" if len(names) > 1 else ""
+        display += "\n"
+        for index, n in enumerate(names):
+            if "mimetype" in n:
+                display += f"{index + 1}. {n['mimetype']}\n"
+
+    return display
+
+
 class ConfigureDialog(QtWidgets.QDialog):
     """
     Configure dialog to present the user with the options to configure this step.
@@ -32,6 +52,20 @@ class ConfigureDialog(QtWidgets.QDialog):
 
     def _makeConnections(self):
         self._ui.lineEditIdentifier.textChanged.connect(self.validate)
+        self._ui.comboBoxInputData.currentTextChanged.connect(self._input_data_changed)
+
+    def _input_data_changed(self, text):
+        if text == "--":
+            self._ui.textEditInputData.clear()
+        else:
+            importer_parameters = main.import_parameters(text)
+
+            display_importer_parameters = f"# {importer_parameters['title']}\n"
+            display_importer_parameters += importer_parameters["description"]
+            display_importer_parameters += _display_parameter("input", importer_parameters)
+            display_importer_parameters += _display_parameter("output", importer_parameters)
+
+            self._ui.textEditInputData.setMarkdown(display_importer_parameters)
 
     def accept(self):
         """
