@@ -69,7 +69,7 @@ class Ui_ConfigureDialog(object):
     # setupUi
 
     def retranslateUi(self, ConfigureDialog):
-        ConfigureDialog.setWindowTitle(QCoreApplication.translate("ConfigureDialog", u"Configure Step", None))
+        ConfigureDialog.setWindowTitle(QCoreApplication.translate("ConfigureDialog", u"Configure Convert Data to Zinc", None))
         self.configGroupBox.setTitle("")
         self.labelIdentifier.setText(QCoreApplication.translate("ConfigureDialog", u"identifier:  ", None))
         self.labelInputData.setText(QCoreApplication.translate("ConfigureDialog", u"Input data:  ", None))

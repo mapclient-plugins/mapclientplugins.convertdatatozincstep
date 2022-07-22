@@ -1,4 +1,4 @@
-from PySide2 import QtGui, QtWidgets
+from PySide2 import QtWidgets
 from mapclientplugins.convertdatatozincstep.ui_configuredialog import Ui_ConfigureDialog
 
 from opencmiss.importer import main
