@@ -29,7 +29,7 @@ The only configurable setting for this step is the step identifier.
 .. figure:: _images/step-configuration-dialog.png
    :alt: Step configure dialog
 
-   *Merge Zinc Data* step configuration dialog.
+   *Merge Zinc Data* step configuration dialog, showing *ColonManometry* as the input data type.
 
 .. _hdg-mcp-convert-data-to-zinc-ports:
 
@@ -51,7 +51,7 @@ and
 The **uses** port is the input data file.
 The **provides** port is the data converted to a Zinc data supplied as a Zinc exf file.
 
-.. _hdg-mcp-convert-data-to-zinc-conversion:
+.. _hdg-mcp-convert-data-to-zinc-conversions:
 
 Conversions
 -----------
