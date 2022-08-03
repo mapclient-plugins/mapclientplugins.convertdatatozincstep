@@ -1,4 +1,6 @@
-from PySide2 import QtWidgets
+import webbrowser
+
+from PySide2 import QtCore, QtWidgets
 from mapclientplugins.convertdatatozincstep.ui_configuredialog import Ui_ConfigureDialog
 
 from opencmiss.importer import main
@@ -48,7 +50,14 @@ class ConfigureDialog(QtWidgets.QDialog):
 
         self._ui.comboBoxInputData.insertItems(0, ["--"] + main.available_importers())
 
+        self.setWhatsThis('<html>Please read the documentation available \n<a href="https://abi-mapping-tools.readthedocs.io/en/latest/mapclientplugins.importer/docs/index.html">here</a> for further details.</html>')
+
         self._makeConnections()
+
+    def event(self, e):
+        if e.type() == QtCore.QEvent.Type.WhatsThisClicked:
+            webbrowser.open(e.href())
+        return super().event(e)
 
     def _makeConnections(self):
         self._ui.lineEditIdentifier.textChanged.connect(self.validate)
