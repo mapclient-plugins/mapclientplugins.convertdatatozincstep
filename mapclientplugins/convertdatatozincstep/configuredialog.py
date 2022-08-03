@@ -50,7 +50,7 @@ class ConfigureDialog(QtWidgets.QDialog):
 
         self._ui.comboBoxInputData.insertItems(0, ["--"] + main.available_importers())
 
-        self.setWhatsThis('<html>Please read the documentation available \n<a href="https://abi-mapping-tools.readthedocs.io/en/latest/mapclientplugins.importer/docs/index.html">here</a> for further details.</html>')
+        self.setWhatsThis('<html>Please read the documentation available \n<a href="https://abi-mapping-tools.readthedocs.io/en/latest/opencmiss.importer/docs/index.html">here</a> for further details.</html>')
 
         self._makeConnections()
 
