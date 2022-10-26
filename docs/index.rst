@@ -58,6 +58,7 @@ Conversions
 
 This plugin can be configured to convert the following types of data into exf format:
 
+* Cell density data
 * Colon high resolution manometry data
 * Colon manometry data
 * MBF Bioscience XML data
