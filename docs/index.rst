@@ -1,57 +1,46 @@
-MAP Client Plugin - Convert Data to Zinc
-========================================
+Convert Data to Zinc
+====================
 
 The **Convert Data to Zinc** is MAP Client plugin for converting data in a file into Zinc exf format.
 
-.. _fig-mcp-convert-data-to-zinc-configured-step:
 
-.. figure:: _images/configured-step.png
-   :alt: Configured step icon
+Workflow Connections
+--------------------
 
-   A configured *Merge Zinc Data* step icon.
+As shown in :numref:`fig-mcp-convert-data-to-zinc-workflow-connections`, the **Convert Data to Zinc** uses 1 input:
 
-**Table of contents**
+1. The input is the file that needs to be converted into a Zinc data file. It can be any type of data in the `Conversions`_ list. (Port: *https://opencmiss.org/1.0/rdf-schema#file_location*)
 
-* :ref:`hdg-mcp-convert-data-to-zinc-configure`
-* :ref:`hdg-mcp-convert-data-to-zinc-ports`
-* :ref:`hdg-mcp-convert-data-to-zinc-conversions`
+It produces 1 output which may be piped to other workflow steps:
 
-.. _hdg-mcp-convert-data-to-zinc-configure:
+1. A file with the data converted to a Zinc data supplied as a Zinc exf file. (Port: *https://opencmiss.org/1.0/rdf-schema#file_location*)
+
+
+The **uses** port is the input data file.
+
+.. _fig-mcp-convert-data-to-zinc-workflow-connections:
+
+.. figure:: _images/workflow-connections.png
+   :alt: Convert Data to Zinc workflow connections.
+   :align: center
+   :figwidth: 75%
+
+   **Convert Data to Zinc** workflow connections.
 
 Configure
 ---------
 
-This step comes pre-configured.
-The only configurable setting for this step is the step identifier.
+The *Input data* parameter is the data type that needs to be converted to Zinc data. Each selection has a short description indicating the format of input data.
 
 .. _fig-mcp-convert-data-to-zinc-configure-dialog:
 
 .. figure:: _images/step-configuration-dialog.png
    :alt: Step configure dialog
 
-   *Merge Zinc Data* step configuration dialog, showing *ColonManometry* as the input data type.
+   *Convert Data to Zinc* step configuration dialog, showing *ColonManometry* as the input data type.
 
 .. _hdg-mcp-convert-data-to-zinc-ports:
 
-Ports
------
-
-This plugin:
-
-* **uses**:
-
-  * *https://opencmiss.org/1.0/rdf-schema#file_location*
-
-and
-
-* **provides**:
-
-  * *https://opencmiss.org/1.0/rdf-schema#file_location*
-
-The **uses** port is the input data file.
-The **provides** port is the data converted to a Zinc data supplied as a Zinc exf file.
-
-.. _hdg-mcp-convert-data-to-zinc-conversions:
 
 Conversions
 -----------
