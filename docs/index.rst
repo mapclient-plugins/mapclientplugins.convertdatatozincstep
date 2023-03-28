@@ -1,6 +1,9 @@
 Convert Data to Zinc
 ====================
 
+Overview
+--------
+
 The **Convert Data to Zinc** is MAP Client plugin for converting data in a file into Zinc exf format.
 
 
@@ -14,6 +17,7 @@ Configuration
 -------------
 
 Information on this plugins' configuration is available :ref:`here <mcp-convertdatatozinc-configuration>`.
+
 
 Instructions
 ------------
