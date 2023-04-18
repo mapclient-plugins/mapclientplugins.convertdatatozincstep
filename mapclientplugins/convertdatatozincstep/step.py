@@ -10,7 +10,7 @@ from PySide6 import QtCore, QtGui, QtWidgets
 from mapclient.mountpoints.workflowstep import WorkflowStepMountPoint
 from mapclientplugins.convertdatatozincstep.configuredialog import ConfigureDialog
 
-from opencmiss.importer import main
+from cmlibs.importer import main
 
 
 class ConvertDataToZincStep(WorkflowStepMountPoint):

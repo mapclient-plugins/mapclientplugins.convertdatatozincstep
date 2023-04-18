@@ -3,7 +3,7 @@ import webbrowser
 from PySide6 import QtCore, QtWidgets
 from mapclientplugins.convertdatatozincstep.ui_configuredialog import Ui_ConfigureDialog
 
-from opencmiss.importer import main
+from cmlibs.importer import main
 
 INVALID_STYLE_SHEET = 'background-color: rgba(239, 0, 0, 50)'
 DEFAULT_STYLE_SHEET = ''
