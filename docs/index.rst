@@ -1,60 +1,26 @@
-MAP Client Plugin - Convert Data to Zinc
-========================================
+Convert Data to Zinc
+====================
+
+Overview
+--------
 
 The **Convert Data to Zinc** is MAP Client plugin for converting data in a file into Zinc exf format.
 
-.. _fig-mcp-convert-data-to-zinc-configured-step:
 
-.. figure:: _images/configured-step.png
-   :alt: Configured step icon
+Specification
+-------------
 
-   A configured *Merge Zinc Data* step icon.
+Information on this plugins' specification is available :ref:`here <mcp-convertdatatozinc-specification>`.
 
-**Table of contents**
 
-* :ref:`hdg-mcp-convert-data-to-zinc-configure`
-* :ref:`hdg-mcp-convert-data-to-zinc-ports`
-* :ref:`hdg-mcp-convert-data-to-zinc-conversions`
+Configuration
+-------------
 
-.. _hdg-mcp-convert-data-to-zinc-configure:
+Information on this plugins' configuration is available :ref:`here <mcp-convertdatatozinc-configuration>`.
 
-Configure
----------
 
-This step comes pre-configured.
-The only configurable setting for this step is the step identifier.
-
-.. _fig-mcp-convert-data-to-zinc-configure-dialog:
-
-.. figure:: _images/step-configuration-dialog.png
-   :alt: Step configure dialog
-
-   *Merge Zinc Data* step configuration dialog, showing *ColonManometry* as the input data type.
-
-.. _hdg-mcp-convert-data-to-zinc-ports:
-
-Ports
------
-
-This plugin:
-
-* **uses**:
-
-  * *https://opencmiss.org/1.0/rdf-schema#file_location*
-
-and
-
-* **provides**:
-
-  * *https://opencmiss.org/1.0/rdf-schema#file_location*
-
-The **uses** port is the input data file.
-The **provides** port is the data converted to a Zinc data supplied as a Zinc exf file.
-
-.. _hdg-mcp-convert-data-to-zinc-conversions:
-
-Conversions
------------
+Instructions
+------------
 
 This plugin can be configured to convert the following types of data into exf format:
 
