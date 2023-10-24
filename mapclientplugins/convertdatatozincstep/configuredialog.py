@@ -12,9 +12,9 @@ DEFAULT_STYLE_SHEET = ''
 def _display_parameter(name, importer_parameters):
     display = ""
     names = []
-    if name in importer_parameters:
+    if name in importer_parameters and importer_parameters[name]:
         names.append(importer_parameters[name])
-    elif name + "s" in importer_parameters:
+    elif name + "s" in importer_parameters and importer_parameters[name + "s"]:
         names.extend(importer_parameters[name + "s"])
 
     if len(names):
