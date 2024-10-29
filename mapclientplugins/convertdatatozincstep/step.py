@@ -52,14 +52,16 @@ class ConvertDataToZincStep(WorkflowStepMountPoint):
         Make sure you call the _doneExecution() method when finished.  This method
         may be connected up to a button in a widget for example.
         """
-        QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
-        directory_identifier = self._config["identifier"].replace(" ", "_")
-        working_directory = os.path.join(self._location, f"output_{directory_identifier}")
-        if not os.path.isdir(working_directory):
-            os.mkdir(working_directory)
-        self._portData1 = main.import_data(self._config["Input data"], self._portData0, working_directory)
-        self._doneExecution()
-        QtWidgets.QApplication.restoreOverrideCursor()
+        QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.CursorShape.WaitCursor)
+        try:
+            directory_identifier = self._config["identifier"].replace(" ", "_")
+            working_directory = os.path.join(self._location, f"output_{directory_identifier}")
+            if not os.path.isdir(working_directory):
+                os.mkdir(working_directory)
+            self._portData1 = main.import_data(self._config["Input data"], self._portData0, working_directory)
+            self._doneExecution()
+        finally:
+            QtWidgets.QApplication.restoreOverrideCursor()
 
     def setPortData(self, index, dataIn):
         """
