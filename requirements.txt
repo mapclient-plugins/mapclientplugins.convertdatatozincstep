@@ -1,0 +1,2 @@
+cmlibs.importer[all] >= 0.7.2
+PySide6
